@@ -1,5 +1,4 @@
 
-*This Folder Comprises of implemented Project and Record Softcopy files*
 
 PROJECT NAME : CONFERENCE MANAGEMENT SYSTEM
 
