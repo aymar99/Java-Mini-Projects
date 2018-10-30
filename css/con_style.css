@@ -1,0 +1,21 @@
+#contact{
+	position: relative;
+	top:100px;
+	width: 50%;
+	left: 25%;
+	right: 25%;
+	text-align: center;	
+	border: 1px solid black;
+	padding: 20px;
+	padding-left: 200px;
+	border-radius: 25px;
+	background: rgba(255, 255, 255, 0.1); 
+
+}
+.form-control{
+	width: 350px;
+}
+#cont{
+	position: absolute;
+	left: 40%;
+}
