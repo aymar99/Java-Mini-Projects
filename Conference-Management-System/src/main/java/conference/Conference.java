@@ -15,7 +15,7 @@ public class Conference {
        logn l=new logn();
         l.setVisible(true);
        
-        //new view_paper2(500).setVisible(true);
+//        new view_paper(1).setVisible(true);
         /*date_loc x=new date_loc();
         System.out.println(x.date + x.locationn);*/
     }

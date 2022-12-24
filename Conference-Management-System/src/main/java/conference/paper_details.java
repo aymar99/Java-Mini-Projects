@@ -1,8 +1,8 @@
 
 package conference;
+import static conference.date_loc.resultSetToTableModel;
 import javax.swing.*;
 import java.sql.*;
-import net.proteanit.sql.DbUtils;
 /**
  *
  * @author it5s5079
@@ -144,8 +144,8 @@ public class paper_details extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+           System.out.println(student_id);
         new view_paper(student_id).setVisible(true);
-        //System.out.println(student_id);
         this.dispose();
     }//GEN-LAST:event_jButton4ActionPerformed
     private void populate(){
@@ -156,13 +156,13 @@ public class paper_details extends javax.swing.JFrame {
                 //int id=3122076;
                 try{
                 Class.forName("com.mysql.jdbc.Driver"); 
-                Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/conference?autoReconnect=true&useSSL=false","newuser","password");
+                Connection con=DriverManager.getConnection("jdbc:mysql://localhost:13306/conference?autoReconnect=true&useSSL=false","root","root123");
                 Statement stmt=con.createStatement();
                 pst=con.prepareStatement(sql);
                 pst.setInt(1, student_id);
                 rs=pst.executeQuery();
                 jTable1.setRowHeight(35);
-                jTable1.setModel(DbUtils.resultSetToTableModel(rs));
+                jTable1.setModel(resultSetToTableModel(rs));
                 //jTable1.getColumnModel().getColumn(0).setPreferredWidth(1);
                }catch(Exception e){ System.out.println(e);}
         

@@ -6,6 +6,7 @@
 package conference;
 import java.sql.*;
 import javax.swing.*;
+import javax.swing.border.BevelBorder;
 
 /**
  *
@@ -74,7 +75,7 @@ public class view_paper extends javax.swing.JFrame {
             }
         });
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(BevelBorder.LOWERED));
 
         jLabel6.setFont(new java.awt.Font("Andalus", 0, 18)); // NOI18N
         jLabel6.setText("Location");
@@ -209,9 +210,9 @@ public class view_paper extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(49, 49, 49)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton3)
-                    .addComponent(jButton2))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton2, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jButton3))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(62, Short.MAX_VALUE))
@@ -231,7 +232,7 @@ public class view_paper extends javax.swing.JFrame {
                             ResultSet rs ;
                             try{
                             Class.forName("com.mysql.jdbc.Driver"); 
-                            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/conference?autoReconnect=true&useSSL=false","newuser","password");
+                            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:13306/conference?autoReconnect=true&useSSL=false","root","root123");
 
                             Statement stmt2=con.createStatement();
                             pst2=con.prepareStatement(sql2);

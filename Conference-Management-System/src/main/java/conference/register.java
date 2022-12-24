@@ -193,13 +193,13 @@ public class register extends javax.swing.JFrame {
                     JOptionPane.showMessageDialog(null, "Passwords dont match");
                 else{
                     String sql2="select id from student where name=? and phone=?";
-                    String sql="INSERT INTO STUDENT(NAME,COLLEGE,EMAIL,PHONE,PASSWORD) VALUES(?,?,?,?,?);";
+                    String sql="INSERT INTO student(NAME,COLLEGE,EMAIL,PHONE,PASSWORD) VALUES(?,?,?,?,?);";
                     PreparedStatement pst,pst2;
                     ResultSet rs ;
 
                     try{
                     Class.forName("com.mysql.jdbc.Driver"); 
-                    Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/conference?autoReconnect=true&useSSL=false","newuser","password");
+                    Connection con=DriverManager.getConnection("jdbc:mysql://localhost:13306/conference?autoReconnect=true&useSSL=false","root","root123");
                     
                     Statement stmt=con.createStatement();
                     pst=con.prepareStatement(sql);

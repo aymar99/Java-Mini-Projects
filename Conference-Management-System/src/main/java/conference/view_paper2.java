@@ -240,7 +240,7 @@ public class view_paper2 extends javax.swing.JFrame {
                             ResultSet rs ;
                             try{
                             Class.forName("com.mysql.jdbc.Driver"); 
-                            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/conference?autoReconnect=true&useSSL=false","newuser","password");
+                            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:13306/conference?autoReconnect=true&useSSL=false","root","root123");
 
                             Statement stmt2=con.createStatement();
                             pst2=con.prepareStatement(sql2);

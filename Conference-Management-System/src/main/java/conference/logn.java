@@ -226,7 +226,7 @@ public class logn extends javax.swing.JFrame {
                 ResultSet rs ;
                 try{
                 Class.forName("com.mysql.jdbc.Driver"); 
-                Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/conference?autoReconnect=true&useSSL=false","newuser","password");
+                Connection con=DriverManager.getConnection("jdbc:mysql://localhost:13306/conference?autoReconnect=true&useSSL=false","root","root123");
                 Statement stmt=con.createStatement();
 
                 pst=con.prepareStatement(sql);
@@ -258,7 +258,7 @@ public class logn extends javax.swing.JFrame {
         ResultSet rs ;
         try{
             Class.forName("com.mysql.jdbc.Driver");
-            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/conference?autoReconnect=true&useSSL=false","newuser","password");
+            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:13306/conference?autoReconnect=true&useSSL=false","root","root123");
             Statement stmt=con.createStatement();
             pst=con.prepareStatement(sql);
             pst.setString(1, jTextField1.getText());

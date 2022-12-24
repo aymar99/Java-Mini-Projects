@@ -1,8 +1,11 @@
 
 package conference;
+import static conference.date_loc.resultSetToTableModel;
 import javax.swing.*;
 import java.sql.*;
-import net.proteanit.sql.DbUtils;
+import java.util.Vector;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableModel;
 
 public class paper_details2 extends javax.swing.JFrame {
 
@@ -189,14 +192,14 @@ public class paper_details2 extends javax.swing.JFrame {
                 ResultSet rs ;
                 try{
                 Class.forName("com.mysql.jdbc.Driver"); 
-                Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/conference?autoReconnect=true&useSSL=false","newuser","password");
+                Connection con=DriverManager.getConnection("jdbc:mysql://localhost:13306/conference?autoReconnect=true&useSSL=false","root","root123");
                 Statement stmt=con.createStatement();
                 
                 pst=con.prepareStatement(sql);
                 pst.setString(1, domain);
                 rs=pst.executeQuery();
                 jTable1.setRowHeight(35);
-                jTable1.setModel(DbUtils.resultSetToTableModel(rs));
+                jTable1.setModel(resultSetToTableModel(rs));
                }catch(Exception e){ System.out.println(e);}
     }//GEN-LAST:event_jButton3ActionPerformed
 
@@ -223,11 +226,11 @@ public class paper_details2 extends javax.swing.JFrame {
                 ResultSet rs ;
                 try{
                 Class.forName("com.mysql.jdbc.Driver"); 
-                Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/conference?autoReconnect=true&useSSL=false","newuser","password");
+                Connection con=DriverManager.getConnection("jdbc:mysql://localhost:13306/conference?autoReconnect=true&useSSL=false","root","root123");
                 Statement stmt=con.createStatement();                
                 pst=con.prepareStatement(sql);
                 rs=pst.executeQuery();
-                jTable1.setModel(DbUtils.resultSetToTableModel(rs));
+                jTable1.setModel(resultSetToTableModel(rs));
                }catch(Exception e){ System.out.println(e);}
     }
     private void populate_not_reviewed(){
@@ -238,14 +241,14 @@ public class paper_details2 extends javax.swing.JFrame {
                 ResultSet rs ;
                 try{
                 Class.forName("com.mysql.jdbc.Driver"); 
-                Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/conference?autoReconnect=true&useSSL=false","newuser","password");
+                Connection con=DriverManager.getConnection("jdbc:mysql://localhost:13306/conference?autoReconnect=true&useSSL=false","root","root123");
                 Statement stmt=con.createStatement();                
                 pst=con.prepareStatement(sql);
                 pst.setString(1,s);
                 pst.setString(2,u);
                 rs=pst.executeQuery();
                 jTable1.setRowHeight(35);
-                jTable1.setModel(DbUtils.resultSetToTableModel(rs));
+                jTable1.setModel(resultSetToTableModel(rs));
                }catch(Exception e){ System.out.println(e);}
     }
 
